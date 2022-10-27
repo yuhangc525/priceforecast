@@ -1,0 +1,30 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: cyh
+    url: jdbc:mysql://localhost:3306/portprice?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  type-aliases-package: com.bjtu.priceforecast.entity
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范
+
+#  常用的日志级别按照从高到低依次为：ERROR、WARN、INFO、DEBUG。
+#  从高到低依次为：ERROR、WARN、INFO、DEBUG。
+#logging:
+#  config: classpath:logback.xml
+#  level:
+#    com.bjtu.priceforecast.mapper: trace
+
+cctd:
+  url: https://www.cctd.com.cn/datasql.php?
+  cookies: lNGUp_auth=ed79Pd3gYZCKDlD-n_WJxJbNhz0yw80G5Qy283ULPiuQ0XO_hRo7k1gbgFtI_lEutmFSOG_ZeJvoFpWsXTzUP-9LpsNSJ_l91fUwutQNF9diPmzeovx-ocStSecYIoxB98ozce4XMlyN96zdJyIxQBX_b0TAcJ0; lNGUp__userid=ca49mZ9hKsWk86OoRdfoe7WQG7_qiAIbh4U1X67SWpya7A; lNGUp__username=1b44_EtN5I1H7xncuPZdDXIAA5dqz2Pm32OUy_tJunXS; lNGUp__groupid=35f4f4vu8uY9tztP0PGEMxfAx4XBXpWGxWdol-P8yw; lNGUp__nickname=2e50nRH0Ueygtj7EXdtDjIPwfb_nkRlZ9D5EYvN68dVjj1ohbwpsR1U; Hm_lvt_594886944cf2480d17095af56ff618e2=1661859198,1662127653,1662196355,1662433052; Hm_lpvt_594886944cf2480d17095af56ff618e2=1662433052
+  userAgent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
